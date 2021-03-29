@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Get Key Code - hbahonar.ir</title>
+    <script>
+        function getKeyCode(e) {
+            var keynum;
+
+            if (window.event) { // IE
+                keynum = e.keyCode;
+            } else if (e.which) { // Netscape/Firefox/Opera
+                keynum = e.which;
+            }
+
+            alert(keynum + " - " + String.fromCharCode(keynum));
+        }
+    </script>
+</head>
+<body>
+<input type="text" name="text" class="myinput" onkeypress="getKeyCode(event)"/>
+</body>
+</html>
